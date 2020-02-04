@@ -2,11 +2,6 @@ require "sinatra/base"
 
 class Battle < Sinatra::Base
   get "/" do 
-    "Testing infrastructure working!"
-  end
-  run! if app_file == $0
-
-  get "/" do 
     erb :index
   end
 
@@ -15,5 +10,7 @@ class Battle < Sinatra::Base
     @player_2_name = params[:player_2_name]
     erb :play
   end
+
+  run! if app_file == $0
   
 end
